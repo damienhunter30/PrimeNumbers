@@ -15,23 +15,10 @@ public class PrimeFinder{
 	}
 	
 	public static void printList(ArrayList<Integer> primes){
-		ArrayList<Integer> newList = removeDuplicates(primes);
-		
-		for(int x = 0; x < newList.size(); x++){
-			System.out.println(newList.get(x));
+		for(int x = 0; x < primes.size(); x++){
+			System.out.println(primes.get(x));
 		}
 	}
-	
-	public static <T> ArrayList<T> removeDuplicates(ArrayList<T> list){
-		ArrayList<T> newList = new ArrayList<T>();
-		
-		for(T element : list){
-            if(!newList.contains(element)){
-                newList.add(element);
-            }
-        }
-        return newList;
-    }
 
 	public static void main(String[] args){
 		PrimeFinder.findPrime(10000);
