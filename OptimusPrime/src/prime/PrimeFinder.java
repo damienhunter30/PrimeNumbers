@@ -3,7 +3,7 @@ package prime;
 import java.util.ArrayList;
 
 public class PrimeFinder{
-	public static void findPrime(int limit){
+	public static ArrayList<Integer> findPrime(int limit){
 		ArrayList<Integer> primes = new ArrayList<Integer>();
 		
 		for(int x = 1; x < limit; x++){
@@ -11,10 +11,10 @@ public class PrimeFinder{
 				primes.add(x);
 			}
 		}
-		printList(primes);
+		return primes;
 	}
 	
-	public static void findPrime(int lowerLimit, int upperLimit) throws LowerBoundsException{
+	public static ArrayList<Integer> findPrime(int lowerLimit, int upperLimit) throws LowerBoundsException{
 		ArrayList<Integer> primes = new ArrayList<Integer>();
 		
 		for(int x = lowerLimit; x < upperLimit; x++){
@@ -25,7 +25,7 @@ public class PrimeFinder{
 				primes.add(x);
 			}
 		}
-		printList(primes);
+		return primes;
 	}
 	
 	public static void printList(ArrayList<Integer> primes){
