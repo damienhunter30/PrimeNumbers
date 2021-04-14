@@ -36,6 +36,7 @@ public class PrimeFinder{
 
 	public static void main(String[] args) throws LowerBoundsException{
 		//PrimeFinder.findPrime(10000);
-		PrimeFinder.findPrime(-1, 1000);
+		PrimeFinder.printList(PrimeFinder.findPrime(1, 1000));
+		//PrimeFinder.findPrime(1, 1000);
 	}
 }
